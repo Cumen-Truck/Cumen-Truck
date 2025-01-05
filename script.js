@@ -121,7 +121,7 @@ if (plataforma.includes('Win')) {
 } else if (plataforma.includes('Android')) {
     setTimeout(() => {
         menu.classList.add('active');
-        if (['index', 'Menu-Cumen-Truck', 'bebidas', 'about'].some(path => window.location.pathname.includes(path))) {
+        if (['index', 'Cumen-Truck', 'Menu-Cumen-Truck', 'bebidas', 'about'].some(path => window.location.pathname.includes(path))) {
             window.onscroll = function () {
                 scrollFunction();
                 menuVisible2();
