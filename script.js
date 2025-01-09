@@ -263,7 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
         detailView.className = 'detail-view';
         document.querySelector('main').appendChild(detailView);
 
-        if (['index', 'Cumen-Truck', 'Menu-Cumen-Truck'].some(path => window.location.pathname.includes(path))) {
+        if (['bebidas', 'Cumen-Truck/bebidas', 'Menu-Cumen-Truck/bebidas', 'about'].some(path => window.location.pathname.includes(path))) {
+        } else if (['index', 'Cumen-Truck', 'Menu-Cumen-Truck'].some(path => window.location.pathname.includes(path))) {
         menuItems.forEach((item, index) => {
             item.addEventListener('click', () => {
                 // Calcular la posición del artículo
@@ -371,7 +372,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
-    }
+    } //else if (['bebidas', 'Cumen-Truck/bebidas'].some(path => window.location.pathname.includes(path))) {
+        //
+    //}
+        //
     }
 });
 //definimos la funcion que verifica si un componente tiene transformacion
