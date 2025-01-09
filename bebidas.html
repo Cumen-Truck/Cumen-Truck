@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Imagenes/favicon.ico">
     <meta name="description" content="Cumen Truck!">
-    <title>Carta Cumen Truck</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Bebidas Cumen Truck</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="animaciones.css">
     <script type="text/javascript" src="script.js" defer></script>
+    <!-- <script defer src="script.js"></script> -->
 </head>
-<body>
+<body class="bebidas">
     <header>
         <div class="logo">
             <img src="Imagenes/logo-transparente.webp" alt="">
@@ -21,7 +23,7 @@
             <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
             <nav class="menu">
                 <ul>
-                    <li id="page"><a href="bebidas.html">Bebidas</a></li>
+                    <li id="page"><a href="index.html">Comidas</a></li>
                     <!-- <li><a href="#servicios">Bebidas</a></li> -->
                     <li><a href="about.html">Nosotros</a></li>
                     <!-- <li><a href="#contacto">Contacto</a></li> -->
@@ -32,95 +34,128 @@
 
     <main>
         <section class="menu-section">
-            <article class="menu-item" id="logo-item1">
-                <!-- <div class="logo-item" id="logo-item"></div> -->
-                <img src="Imagenes/Burguer/burguer-completa.webp" alt="" id="Burguer" class="Burguer">
+            <div class="menu-item" id="coke">
+                <h3>Coca Cola</h3>
+                <!-- <div class="imagenes"> -->
+                    <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                    <img src="Imagenes/bebidas/coca.webp" alt="" id="Img1" class="Img1">
+                <!-- </div> -->
+                <p class="price" id="gaseosa"></p>
+            </div>
+            <div class="menu-item" id="coke-zero">
+                <h3>Coca Cola Zero</h3>
+                <!-- <div class="imagenes"></div> -->
                 <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
-                <img src="Imagenes/Burguer/burguer.webp" alt="" id="Img1" class="Img1">
-                <!-- <img src="Imagenes/burguer.webp" alt="Menu 1" id="Img2" class="Img2"> -->
-                <img src="Imagenes/Burguer/textos-burguer.webp" alt="" id="Img2" class="Img2">
-                <h3>Hamburguesa</h3>
-                <p>Jamón, Queso, Lechuga y Tomate.</p>
-                <p class="price">$6500</p>
-            </article>
-
-            <article class="menu-item" id="logo-item2">
-                <img src="Imagenes/Choritaco/chori-completo.webp" alt="" id="Choritaco" class="Choritaco">
+                <img src="Imagenes/bebidas/zero.webp" alt="" id="Img1" class="Img1">
+                <!-- <p>All the taste of Coca Cola, without the sugar.</p> -->
+                <p class="price" id="gaseosa"></p>
+            </div>
+            <div class="menu-item" id="sprite">
+                <h3>Sprite</h3>
+                <!-- <div class="imagenes"></div> -->
                 <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
-                <img src="Imagenes/Choritaco/chori.webp" alt="Menu 2" id="Img1" class="Img1">
-                <img src="Imagenes/Choritaco/textos-chori.webp" alt="" id="Img2" class="Img2">
-                <h3>Choritaco</h3>
-                <p>Pan arabe casero, relleno de chorizo, criolla, tomate, lechuga.</p>
-                <p class="price">$4500</p>
-            </article>
-
-            <article class="menu-item" id="logo-item3">
-                <img src="Imagenes/Trucha/trucha-completa.webp" alt="" id="Trucha" class="Trucha">
+                <img src="Imagenes/bebidas/sprite.webp" alt="" id="Img1" class="Img1">
+                <!-- <p>Crisp and refreshing lemon-lime flavor.</p> -->
+                <p class="price" id="gaseosa"></p>
+            </div>
+            <div class="menu-item" id="fanta">
+                <h3>Fanta</h3>
+                <!-- <div class="imagenes"></div> -->
                 <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
-                <img src="Imagenes/Trucha/trucha.webp" alt="Menu 3" id="Img1" class="Img1">
-                <img src="Imagenes/Trucha/textos-trucha.webp" alt="" id="Img2" class="Img2">
-                <h3>Taco de Trucha</h3>
-                <p>Trucha salteada con cebolla y pimenton.</p>
-                <p class="price">$5000</p>
-            </article>
-
-            <article class="menu-item" id="logo-item4">
-                <img src="Imagenes/Veggie/veggie-completo.webp" alt="" id="Veggie" class="Veggie">
+                <img src="Imagenes/bebidas/fanta.webp" alt="" id="Img1" class="Img1">
+                <!-- <p>Bright, bubbly, and instantly refreshing.</p> -->
+                <p class="price" id="gaseosa"></p>
+            </div>
+            <div class="menu-item" id="pomelo">
+                <h3>Aquarius Pomelo</h3>
+                <!-- <div class="imagenes"></div> -->
                 <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
-                <img src="Imagenes/Veggie/veggie.webp" alt="Menu 4" id="Img1" class="Img1">
-                <img src="Imagenes/Veggie/textos-veggie.webp" alt="" id="Img2" class="Img2">
-                <h3>Taco Veggie</h3>
-                <p>Verduras salteadas.</p>
-                <p class="price">$4000</p>
-            </article>
-
-            <article class="menu-item" id="logo-item5">
-                <img src="Imagenes/Cordero/burguer-completa.webp" alt="" id="Cordero" class="Cordero">
+                <img src="Imagenes/bebidas/pomelo.webp" alt="" id="Img1" class="Img1">
+                <!-- <p>Bright, bubbly, and instantly refreshing.</p> -->
+                <p class="price" id="saborizada"></p>
+            </div>
+            <div class="menu-item" id="naranja">
+                <h3>Aquarius Naranja</h3>
+                <!-- <div class="imagenes"></div> -->
                 <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
-                <img src="Imagenes/Cordero/choritaco.webp" alt="Menu 5" id="Img1" class="Img1">
-                <img src="Imagenes/Cordero/Textos-Cordero.webp" alt="" id="Img2" class="Img2">
-                <h3>Hamburguesa Cordero</h3>
-                <p>Cordero, Cebolla caramelizada, queso pimienta, panceta ahumada, rucula y alioli.</p>
-                <p class="price">$9000</p>
-            </article>
-
-            <article class="menu-item" id="logo-item6">
-                <img src="Imagenes/Pancho/burguer-completa.webp" alt="" id="Pancho" class="Pancho">
+                <img src="Imagenes/bebidas/naranja.webp" alt="" id="Img1" class="Img1">
+                <!-- <p>Bright, bubbly, and instantly refreshing.</p> -->
+                <p class="price" id="saborizada"></p>
+            </div>
+            <div class="menu-item" id="pera">
+                <h3>Aquarius Pera</h3>
+                <!-- <div class="imagenes"></div> -->
                 <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
-                <img src="Imagenes/Pancho/choritaco.webp" alt="Menu 6" id="Img1" class="Img1">
-                <img src="Imagenes/Pancho/textos-pancho.webp" alt="" id="Img2" class="Img2">
-                <h3>Super Pancho</h3>
-                <p>Pan pancho y salchicha.</p>
-                <p class="price">$4000</p>
-            </article>
-
-            <article class="menu-item" id="logo-item7">
-                <img src="Imagenes/Pollo/burguer-completa.webp" alt="" id="Pollo" class="Pollo">
+                <img src="Imagenes/bebidas/pera.webp" alt="" id="Img1" class="Img1">
+                <!-- <p>Bright, bubbly, and instantly refreshing.</p> -->
+                <p class="price" id="saborizada"></p>
+            </div>
+            <div class="menu-item" id="manzana">
+                <h3>Aquarius Manzana</h3>
                 <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
-                <img src="Imagenes/Pollo/choritaco.webp" alt="Menu 8" id="Img1" class="Img1">
-                <img src="Imagenes/Pollo/textos-pollo.webp" alt="" id="Img2" class="Img2">                
-                <h3>Hamburguesa Pollo</h3>
-                <p>Medallón de pollo casero con lechuga y tomate.</p>
-                <p class="price">$5500</p>
-            </article>
-
-            <article class="menu-item" id="logo-item8">
-                <img src="Imagenes/Fritas/burguer-completa.webp" alt="" id="Fritas" class="Fritas">
+                <img src="Imagenes/bebidas/manzana.webp" alt="" id="Img1" class="Img1">
+                <!-- <p>Bright, bubbly, and instantly refreshing.</p> -->
+                <p class="price" id="saborizada"></p>
+            </div>
+            <div class="menu-item" id="agua">
+                <h3>Agua Mineral s/g</h3>
                 <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
-                <img src="Imagenes/Fritas/choritaco.webp" alt="Menu 7" id="Img1" class="Img1">
-                <img src="Imagenes/Fritas/textos-fritas.webp" alt="" id="Img2" class="Img2">
-                <h3>Cono Fritas</h3>
-                <p>Cono de papas fritas.</p>
-                <p class="price">$4000</p>
-            </article>
+                <img src="Imagenes/bebidas/agua.webp" alt="" id="Img1" class="Img1">
+                <!-- <p>Bright, bubbly, and instantly refreshing.</p> -->
+                <p class="price" id="agua"></p>
+            </div>
+            <div class="menu-item" id="cerveza">
+                <h3>Cervezas Lata</h3>
+                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/bebidas/cerveza.webp" alt="" id="Img1" class="Img1">
+                <!-- <p>Bright, bubbly, and instantly refreshing.</p> -->
+                <p class="price" id="cerveza"></p>
+            </div>
         </section>
     </main>
-
     <footer>
+        <div class="back">
+            <button id="myBtn2" title="Volver Atrás"></button>
+        </div>
         <p>Síguenos en:</p>
         <a href="https://www.facebook.com/cumen.truck" target="_blank"><img src="Imagenes/facebook.svg" alt="Facebook" class="ImgSocial" id="Facebook" onmouseover="Titulos()"></a>
         <a href="https://www.instagram.com/cumen.truck/" target="_blank"><img src="Imagenes/instagram.webp" alt="Instagram" class="ImgSocial" id="Instagram" onmouseover="Titulos()"></a>
         <!-- <a href="#">Twitter</a> -->
     </footer>
+    <script>
+        // Selecciona todos los contenedores con la clase "menu-item"
+        const itemsMenu = document.querySelectorAll('.menu-item');
+
+        // Itera sobre cada contenedor
+        itemsMenu.forEach(item => {
+        // Crea un nuevo elemento <div>
+            const nuevoDiv = document.createElement('div');
+            nuevoDiv.className = 'imagenes'; // Asigna una clase al nuevo <div>
+
+            // Agrega el nuevo <div> dentro del contenedor actual (al final)
+            item.appendChild(nuevoDiv);
+
+            // Opcional: puedes mover las imágenes existentes dentro del nuevo <div>
+            const fondoImg = item.querySelector('.FondoImg');
+            const img1 = item.querySelector('.Img1');
+
+            //if (fondoImg) nuevoDiv.appendChild(fondoImg);
+            if (img1) nuevoDiv.appendChild(img1);
+
+            const priceElement = item.querySelector('.price');
+            if (priceElement) {
+                item.insertBefore(nuevoDiv, priceElement);
+            }
+        });        
+        const GoBack = () => {
+            //if (navigator.userAgent.includes('Android') && window.location.pathname.includes('about')) {
+            if (window.location.pathname.includes('bebidas')) {
+                if (window.history.length > 1) window.history.back();
+                else console.log('No hay historial disponible.');
+            }
+        };
+        
+        document.getElementById("myBtn2").addEventListener("click", GoBack);
+    </script>
 </body>
 </html>

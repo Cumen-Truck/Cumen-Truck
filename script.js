@@ -125,7 +125,7 @@ if (plataforma.includes('Win')) {
             window.onscroll = function () {
                 scrollFunction();
                 menuVisible2();
-                sisi();                
+                //sisi();
             };
         }
     }, 500);
@@ -262,13 +262,14 @@ document.addEventListener('DOMContentLoaded', () => {
         detailView.id = 'details';
         detailView.className = 'detail-view';
         document.querySelector('main').appendChild(detailView);
-        
-        menuItems.forEach((item, index) => {            
+
+        if (['index', 'Cumen-Truck', 'Menu-Cumen-Truck'].some(path => window.location.pathname.includes(path))) {
+        menuItems.forEach((item, index) => {
             item.addEventListener('click', () => {
                 // Calcular la posición del artículo
                 const rect = item.getBoundingClientRect();
                 const positionX = rect.left + window.scrollX;
-                const positionY = rect.top + window.scrollY;                
+                const positionY = rect.top + window.scrollY;
 
                 // Establecer el estilo de `detailView` para que coincida
                 detailView.style.left = `${positionX}px`;
@@ -301,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 itemid.classList.add('hidden');
 
-                
+
 
 
                 setTimeout(() => {
@@ -370,6 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
+    }
     }
 });
 //definimos la funcion que verifica si un componente tiene transformacion
@@ -465,14 +467,14 @@ function sisi (dire) {
     const deta = document.querySelector('.detail-view');
     const iid = deta.id;
     //console.log(deta.classList);
-    //console.log(iid);    
+    //console.log(iid);
 
-    menuItems.forEach((item, index) => {            
+    menuItems.forEach((item, index) => {
         if (item.classList.contains('hidden')) {
             const rect = item.getBoundingClientRect();
             //const positionX = rect.left + window.scrollX;
-            //const positionY = rect.top + window.scrollY;    
-            //console.log(deta.getBoundingClientRect().top);            
+            //const positionY = rect.top + window.scrollY;
+            //console.log(deta.getBoundingClientRect().top);
             //window.onscroll = function () {
                 if (deta.getBoundingClientRect().top <= -370) {
                 //if (document.body.scrollTop > rect.height || document.documentElement.scrollTop > rect.height) {

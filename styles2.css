@@ -239,24 +239,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-@keyframes heartbeat2 {
-    0% {
-        opacity: 0.8;
-        transform: scale(1);
-    }
-    30% {
-        opacity: 0.6;
-        transform: scale(1.2);
-    }
-    60% {
-        opacity: 0.6;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0.8;
-        transform: scale(1);
-    }
-}
+
 @media only screen and (min-width: 360px) and (max-width: 501px) and (orientation: portrait) {
     body {
         margin: 0 5px 0 5px;
