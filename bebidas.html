@@ -156,6 +156,18 @@
         };
         
         document.getElementById("myBtn2").addEventListener("click", GoBack);
+        const fondos = document.querySelectorAll('.FondoImg');
+        const everySecondItem = [];
+        //console.log(fondos);
+        fondos.forEach((item, index) => {
+            if (index % 2 === 0) {
+                let num = index + 1;
+                everySecondItem.push(item);
+                fondos[num].style.transform = 'scaleX(-1)';
+                console.log(fondos[num]);
+                console.log(index + 1);
+            }
+        });
     </script>
 </body>
 </html>

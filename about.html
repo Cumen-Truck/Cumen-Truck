@@ -39,17 +39,19 @@
         </div>
         <div class="content">
             <h2>Nuestra Historia</h2>
-            <p>
-                En Cumen Truck, nos apasiona ofrecer comida deliciosa y auténtica que deleite a nuestros clientes. Desde nuestros comienzos, hemos trabajado con dedicación para crear un menú que combina ingredientes frescos y recetas tradicionales con un toque moderno.
+            <p class="nHistoria" id="historia">
+                <!-- En Cumen Truck, nos apasiona ofrecer comida deliciosa y auténtica que deleite a nuestros clientes. Desde nuestros comienzos, hemos trabajado con dedicación para crear un menú que combina ingredientes frescos y recetas tradicionales con un toque moderno. -->
             </p>
-            <p>
-                Nuestro compromiso con la calidad y el sabor nos ha convertido en una referencia en la escena gastronómica local. Nos esforzamos por brindar una experiencia única, tanto en sabor como en servicio.
+            <p class="compromiso" id="compromiso">
+                <!-- Nuestro compromiso con la calidad y el sabor nos ha convertido en una referencia en la escena gastronómica local. Nos esforzamos por brindar una experiencia única, tanto en sabor como en servicio. -->
             </p>
         </div>
         </div>
         <div class="content" id="equipo">
             <h2>El Equipo</h2>
-            <p>Detrás de cada platillo hay un equipo apasionado y comprometido con la excelencia:</p>
+            <p class="equipo" id="equipo">
+                <!-- Detrás de cada platillo hay un equipo apasionado y comprometido con la excelencia: -->
+            </p>
             <div class="team">
                 <div class="team-member">
                     <img src="Imagenes/team/carmen-noemi.webp" alt="Fundador">
@@ -95,6 +97,13 @@
                         if (typeof scrollFunction === 'function') scrollFunction();
                     }
                     if (typeof CargaAbout === 'function') CargaAbout();
+                    
+                    if (typeof buscarDescripcion2 === 'function') {
+                        //const descripcion = await buscarDescripcion2(historia.id.toLowerCase(), 'descripciones', 'descripciones');
+                        //console.log(descripcion);
+                        //historia.textContent = descripcion;
+                        miFuncionAsync();
+                    };
                 } catch (error) {
                     console.error('Error al ejecutar funciones:', error);
                 }
@@ -110,6 +119,18 @@
                 else console.log('No hay historial disponible.');
             }
         };
+
+        async function miFuncionAsync() {
+            const descripcion = await buscarDescripcion2(historia.id.toLowerCase(), 'descripciones', 'descripciones');
+            const descripcion2 = await buscarDescripcion2(compromiso.id.toLowerCase(), 'descripciones', 'descripciones');
+            const descripcion3 = await buscarDescripcion2(equipo.id.toLowerCase(), 'descripciones', 'descripciones');
+            historia.textContent = descripcion;
+            compromiso.textContent = descripcion2;
+            equipo.textContent = descripcion3;
+            //console.log("Inicio de la función async...");
+            //await new Promise(resolve => setTimeout(resolve, 2000)); // Simula un delay de 2 segundos
+            //console.log("Fin de la función async");
+        ;}
 
         /* const isBottomOfPage2 = () => {
             return window.scrollY + window.innerHeight >= document.documentElement.scrollHeight;
@@ -132,6 +153,9 @@
                 }
             }
         }; */
+        const historia = document.querySelector('.nHistoria');
+        const compromiso = document.querySelector('.compromiso');
+        const equipo = document.querySelector('.equipo');
         const plataforma2 = navigator.userAgent;
         const imageContainer = document.querySelector('.hero');
         const image = document.querySelector('.zoom-image');

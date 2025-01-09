@@ -136,6 +136,7 @@ main {
 }
 
 .menu-item {
+    /* background-image: radial-gradient(#ffb931, #ff6100); */
     border: 1px solid #333;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
@@ -151,9 +152,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 15px;
     position: relative;
     width: 100%;
+    height: 100%;
     z-index: 3;
 }
 
@@ -177,7 +179,7 @@ main {
     position: absolute;
     top: 0;
     z-index: 1;
-    background-size: cover;
+    /* background-size: cover;     */
 }
 
 #Img1 {
@@ -313,18 +315,20 @@ footer a:hover {
         transition: transform 0.5s ease-in-out;
     }
 
-    .menu-item h3 {        
+    .menu-item h3 {
         color: #fff;
-        font-size: 15px;        
+        font-size: 15px;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
         border: 1px solid #f8b400;
-        margin: 0;        
+        margin: 0;
     }
     .menu-item .price {
         z-index: 2;
         color: #333;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-        margin: 0;
+        /* margin: 0; */
+        margin: 5px 0;
+        font-size: 1rem;
     }
 
     #Img1 {
@@ -335,10 +339,13 @@ footer a:hover {
         width: 100%;
         height: 100%;
         top: 15px;
+        padding: 5px;
         /* margin-bottom: 10px; */
     }
     #FondoImg {
         height: 100%;
+        filter: blur(2px);
+        /* opacity: 0.5; */
     }
     #myBtn {
         display: none;
