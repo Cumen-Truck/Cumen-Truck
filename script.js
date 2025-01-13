@@ -7,6 +7,7 @@ const metaContent = document.querySelector('meta[name="description"]');
 const ContMeta = 'Cumen Truck ofrece una deliciosa variedad de comidas rápidas, incluyendo hamburguesas, tacos y panchos, elaborados con ingredientes frescos y de calidad. Disfruta de opciones como la Hamburguesa de Cordero con cebolla caramelizada y alioli, o el Taco Veggie con verduras salteadas, todo a precios accesibles. ¡El buen sabor te espera en Cumen Truck!';
 //definimos constante plataforma
 const plataforma = navigator.userAgent;
+
 //definimos la funcion onload
 window.onload = function() {
     //cargarImg();
@@ -59,6 +60,9 @@ function cargarImg(){
         }
     }
 }
+
+
+
 //definimos la funcion que crea el boton de top para dispositivos moviles
 function creaTop(){
     //if (location.href.includes('Menu-Cumen-Truck') || location.href.includes('index') || window.location.pathname.includes('index') || location.href.includes('bebidas') || window.location.pathname.includes('bebidas') || window.location.pathname.includes('Menu-Cumen-Truck'))
@@ -125,7 +129,7 @@ if (plataforma.includes('Win')) {
             window.onscroll = function () {
                 scrollFunction();
                 menuVisible2();
-                //sisi();
+                sisi();
             };
         }
     }, 500);
@@ -230,6 +234,20 @@ function topFunction() {
       // Resto del código para elementos visibles
     });
   } */
+
+
+/* function busquedaArray(elem, array) {
+    elem.forEach((element) => {
+        const strName = element.id.toLowerCase();
+        const result = array.find(({ name }) => name === strName);
+        if (result) {
+            console.log(result);
+            //element.textContent = '$' + result.valor;
+        }
+    });
+} */
+
+
 // Verifica si el dispositivo es móvil
 function esMovil() {
     return /Mobi|Android/i.test(navigator.userAgent);
@@ -261,7 +279,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const detailView = document.createElement('div');
         detailView.id = 'details';
         detailView.className = 'detail-view';
-        document.querySelector('main').appendChild(detailView);
+        //document.querySelector('main').appendChild(detailView);
+        document.querySelector('.menu-section').appendChild(detailView);
 
         if (['bebidas', 'Cumen-Truck/bebidas', 'Menu-Cumen-Truck/bebidas', 'about'].some(path => window.location.pathname.includes(path))) {
         } else if (['index', 'Cumen-Truck', 'Menu-Cumen-Truck'].some(path => window.location.pathname.includes(path))) {
@@ -334,14 +353,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="Imagenes/logo-transparente.webp" alt="" id="FondoImg" class="FondoImg">
                     <div class="descContent">
                         <h2>${item.querySelector('h3').textContent}</h2>
-                        <!-- <p>${item.querySelector('p:not(.price)').textContent}</p> -->
+                        <!-- <p>${item.querySelector('p:not(.price)').textContent}</p> -->                        
+                        <video autoplay muted loop>
+                            <!-- <source src="Imagenes/Chori-Burguer/chori-burguer.webm" type="video/mp4"> -->
+                        </video>
                         <div class="descripcion">
                             <!-- <p name="text" id="descr" class="descripcion"></p> -->
                             <p id="descr"></p>
                         </div>
                         <h1>${item.querySelector('.price').textContent}</h1>
                     </div>
-                    <button class="back-button"><img src="Imagenes/close.webp" alt="" id="btnClose" class="btnClose"></button>
+                    <!-- <button class="back-button"><img src="Imagenes/close.webp" alt="" id="btnClose" class="btnClose"></button> -->
+                    <div class="back-button"><button id="btnClose" class="btnClose"></button></div>
                 `;
                 detailView.innerHTML = detailContent;
                 var lklk = item.querySelector('.price');
@@ -350,9 +373,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     const descripcion = await buscarDescripcion2(lklk.id.toLowerCase(), 'descripciones', 'descripciones');
                     const AreaDescription = document.querySelector('#descr');
                     AreaDescription.textContent = descripcion;
-                })();
+                })();                
+                const video = document.querySelector("video");                
+                const string = item.id;
+                const numero = string.match(/\d+/);
+                video.src = 'Videos/' + numero[0] + '.webm';
+                video.type = 'video/mp4';
+                video.autoplay = true;
+                video.muted = true;
+                video.loop = true;
+                video.play();
                 // Manejar el botón "Volver"
-                const backButton = detailView.querySelector('.back-button');
+                //const backButton = detailView.querySelector('.back-button');
+                const backButton = detailView.querySelector('.btnClose');
                 backButton.addEventListener('click', () => {
                     if (esTransform(detailView) > 0) {
                         detailView.style.transform = 'scale(0)';
@@ -498,4 +531,3 @@ function sisi (dire) {
         }
     });
 }
-
