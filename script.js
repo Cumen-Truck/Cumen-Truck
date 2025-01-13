@@ -9,23 +9,8 @@ const ContMeta = 'Cumen Truck ofrece una deliciosa variedad de comidas rápidas,
 const plataforma = navigator.userAgent;
 
 //definimos la funcion onload
-window.onload = function() {
-    //cargarImg();
-    //if (plataforma.includes('Android')) {
-        //creaTop();
-    //}
+window.onload = function() {    
     metaContent.content = ContMeta;
-    //console.log(location.href);
-    //if (page.textContent == 'Comidas') {
-        //page.textContent = 'Bebidas';
-        //page.href = 'bebidas.html';
-    //} else if (page.textContent == 'Bebidas') {
-        //page.textContent = 'Comidas';
-        //page.href = 'index.html';
-    //} else if (location.href.includes('about') && window.location.pathname.includes('about')) {
-        //page.textContent = 'Comidas';
-        //page.href = 'index.html';
-    //}
 };
 //document.body.onload = cargarImg;
 //Definimos la funcion que agrega los titulos a los componentes
@@ -64,14 +49,7 @@ function cargarImg(){
 
 
 //definimos la funcion que crea el boton de top para dispositivos moviles
-function creaTop(){
-    //if (location.href.includes('Menu-Cumen-Truck') || location.href.includes('index') || window.location.pathname.includes('index') || location.href.includes('bebidas') || window.location.pathname.includes('bebidas') || window.location.pathname.includes('Menu-Cumen-Truck'))
-    //if (location.href.includes('Menu-Cumen-Truck') && location.href.includes('index') || window.location.pathname.includes('Menu-Cumen-Truck') && window.location.pathname.includes('index') || location.href.includes('bebidas') || window.location.pathname.includes('bebidas'))
-    /* if (location.href.includes('index') && window.location.pathname.includes('index') || location.href.includes('bebidas') || window.location.pathname.includes('bebidas'))
-        var destino = document.querySelector("main");
-    else if (window.location.pathname.includes('about')) {
-        destino = document.querySelector(".container");
-    } */
+function creaTop(){    
     if (window.location.pathname.includes('about')) {
         var destino = document.querySelector(".container");
     } else {
@@ -130,44 +108,11 @@ if (plataforma.includes('Win')) {
                 scrollFunction();
                 menuVisible2();
                 sisi();
-                //sisi2();
-                //scrollUp2();
             };
         }
     }, 500);
 }
-/* async function hiddde(hg) {
-    if (plataforma.includes('Win')) {
-        tiene = menu.classList.value;
-        console.log(tiene);
-        if (hg === 'saltar') {
-            tiene = '';
-            console.log('hay que saltar');
-            return 'no';
-        } else {
-            console.log(hg);
-        //if (menu.classList.contains('active')) {
-            if (tiene === 'menu active') {
-                if (hg === 'header' && tiene === 'menu active') {
-                    console.log(hg);
-                    menu.classList.remove('active');
-                    tiene = '';
-                }
-                if (hg.includes('menus') && tiene === 'menu active') {
-                    console.log('menu');
-                    menu.classList.remove('active');
-                }
-            } else {
-                if (hg.includes('menus')) {
-                    menu.classList.toggle('active');
-                }
-                //menu.classList.add('active');
-            }
-        }
-    } else if (plataforma.includes('Android')) {
-        //
-    }
-} */
+
 let a = '';
 let b = '';
 let scrolll = '';
@@ -221,35 +166,6 @@ function topFunction() {
         }
     }
 }
-/* function getAndroidVersion() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const match = userAgent.match(/Android\s([0-9\.]+)/);
-    return match ? match[1] : null; // Devuelve la versión o null si no es Android
-} */
-/* function ejecutarParaElementos(elementos) {
-    elementos.forEach(elemento => {
-      if (elemento.classList.contains('hidden')) {
-        console.log("El elemento está oculto. Saltando...");
-        return; // Saltar al siguiente elemento
-      }
-      console.log("Procesando elemento visible:", elemento);
-      // Resto del código para elementos visibles
-    });
-  } */
-
-
-/* function busquedaArray(elem, array) {
-    elem.forEach((element) => {
-        const strName = element.id.toLowerCase();
-        const result = array.find(({ name }) => name === strName);
-        if (result) {
-            console.log(result);
-            //element.textContent = '$' + result.valor;
-        }
-    });
-} */
-
-
 // Verifica si el dispositivo es móvil
 function esMovil() {
     return /Mobi|Android/i.test(navigator.userAgent);
@@ -300,16 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 detailView.style.height = `${rect.height}px`; // Mantener la altura del artículo
                 detailView.style.transform = 'scale(0)';
                 // Forzar un reflow para registrar el estado inicial
-                detailView.offsetHeight;
-                /* for (let c = 0; c < menuItems.length; c++) {
-                    var menuclass = menuItems[c];
-                    if (menuclass.classList.value === 'menu-item hidden') {
-                        menuclass.classList.remove('hidden');
-                    } else if (menuclass.className != 'menu-item hidden') {
-                        item.classList.add('hidden');
-                    }
-                } */
-                //item.classList.add('hidden');
+                detailView.offsetHeight;                
 
                 const itemid = document.getElementById(item.id);
                 //itemid.classList.add('hidden');
@@ -339,23 +246,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     };
                 }, 300);
-                /* if (detailView.classList.contains('active')) {
-                    detailView.classList.remove('active');
-                    for (let c = 0; c < menuItems.length; c++) {
-                        //var menuclass = menuItems[c];
-                        if (menuclass.classList.contains('hidden')) {
-                            menuclass.classList.remove('hidden');
-                        } else {
-                            menuclass.classList.add('hidden');
-                        }
-                    }
-                } */
+                
                 // Mostrar información detallada
                 const detailContent = `
                     <img src="Imagenes/logo-transparente.webp" alt="" id="FondoImg" class="FondoImg">
                     <div class="descContent">
                         <h2>${item.querySelector('h3').textContent}</h2>
-                        <!-- <p>${item.querySelector('p:not(.price)').textContent}</p> -->                        
+                        <!-- <p>${item.querySelector('p:not(.price)').textContent}</p> -->
                         <video autoplay muted loop>
                             <!-- <source src="Imagenes/Chori-Burguer/chori-burguer.webm" type="video/mp4"> -->
                         </video>
@@ -375,8 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const descripcion = await buscarDescripcion2(lklk.id.toLowerCase(), 'descripciones', 'descripciones');
                     const AreaDescription = document.querySelector('#descr');
                     AreaDescription.textContent = descripcion;
-                })();                
-                const video = document.querySelector("video");                
+                })();
+                const video = document.querySelector("video");
                 const string = item.id;
                 const numero = string.match(/\d+/);
                 video.src = 'Videos/' + numero[0] + '.webm';
@@ -502,123 +399,20 @@ function menuVisible2(){
 }
 const menuItems = document.querySelectorAll('.menu-item');
 
-
-function sisi (dire) {
+function sisi () {
     const deta = document.querySelector('.detail-view');
-    //const iid = deta.id;
-    //console.log(deta.classList);
-    //console.log(iid);
-
     menuItems.forEach((item, index) => {
         if (item.classList.contains('hidden')) {
-            const rect = item.getBoundingClientRect();
-            //const positionX = rect.left + window.scrollX;
-            //const positionY = rect.top + window.scrollY;
-            //console.log(deta.getBoundingClientRect().top);
-            //window.onscroll = function () {
-                if (deta.getBoundingClientRect().top <= -370) {
-                //if (document.body.scrollTop > rect.height || document.documentElement.scrollTop > rect.height) {
-                            //
-                    //console.log('si');
-                    deta.classList.remove('active');
-                    item.classList.remove('hidden');
-                } else if (isBottomOfPage() || window.scrollY == 0) {
-                    deta.classList.remove('active');
-                    item.classList.remove('hidden');
-                    //console.log('no');
-                } else if (deta.getBoundingClientRect().top >= 730) {                    
-                    deta.classList.remove('active');
-                    item.classList.remove('hidden');
-                }                
-            //}
+            if (deta.getBoundingClientRect().top <= -370) {
+                deta.classList.remove('active');
+                item.classList.remove('hidden');
+            } else if (isBottomOfPage() || window.scrollY == 0) {
+                deta.classList.remove('active');
+                item.classList.remove('hidden');
+            } else if (deta.getBoundingClientRect().top >= 730) {
+                deta.classList.remove('active');
+                item.classList.remove('hidden');
+            }
         }
     });
-}
-
-function sisi2 () {
-    const deta = document.querySelector('.detail-view');
-    //const iid = deta.id;
-    //console.log(deta.classList);
-    //console.log(iid);
-
-    menuItems.forEach((item) => {
-        if (item.classList.contains('hidden')) {
-            const rect = item.getBoundingClientRect();
-            //const positionX = rect.left + window.scrollX;
-            //const positionY = rect.top + window.scrollY;
-            //console.log(deta.getBoundingClientRect().top);
-            //window.onscroll = function () {
-                if (deta.getBoundingClientRect().top >= 730) {
-                //if (document.body.scrollTop > rect.height || document.documentElement.scrollTop > rect.height) {
-                            //
-                    //console.log('si');
-                    deta.classList.remove('active');
-                    item.classList.remove('hidden');
-                } else if (isBottomOfPage() || window.scrollY == 0) {
-                    //deta.classList.remove('active');
-                    //item.classList.remove('hidden');
-                    //console.log('no');
-                }/*  else if (dire == 'arriba'){
-                    deta.classList.remove('active');
-                    item.classList.remove('hidden');
-                } */
-            //}
-        }
-    });
-}
-
-function scrollUp2() {
-    let lastScrollPosition = 0;
-    window.addEventListener('scroll', () => {
-        const currentScrollPosition = window.scrollY;
-        const deta = document.querySelector('.detail-view');
-
-        if (currentScrollPosition < lastScrollPosition) {
-            //console.log('Scrolling up');
-            console.log(deta.getBoundingClientRect().top);
-            // Aquí puedes ejecutar la lógica para el scroll hacia arriba
-        } else {
-            //console.log('Scrolling down');
-            // Aquí puedes ejecutar la lógica para el scroll hacia abajo
-        }
-
-        lastScrollPosition = currentScrollPosition;
-    });
-}
-
-function scrollUp() {
-    let lastScrollPosition = 0;
-    const elementToHide = document.getElementById('elementToHide');
-    
-    
-
-    /* menuItems.forEach((item, index) => {
-        const targetDiv = document.getElementById(item.id);
-        const targetHeight = targetDiv.offsetHeight;
-        console.log(targetHeight);
-    }); */
-
-    window.addEventListener('scroll', () => {        
-        const currentScrollPosition = window.scrollY;
-        menuItems.forEach((item, index) => {
-            const deta = document.querySelector('.detail-view');
-            const targetHeight = deta.offsetHeight;
-            //const targetDiv = document.getElementById(item.id);
-            //const targetHeight = targetDiv.offsetHeight;
-            //console.log(targetHeight);
-        
-
-      // Detect scroll up
-      if (currentScrollPosition < lastScrollPosition) {
-        if (currentScrollPosition > targetHeight) {
-          deta.classList.add('hidden'); // Hide the element
-          item.classList.remove('hidden');
-        }
-      } else {
-        deta.classList.remove('active'); // Show the element on scroll down
-      }
-    });
-      lastScrollPosition = currentScrollPosition;
-    });
-
 }
