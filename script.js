@@ -130,6 +130,8 @@ if (plataforma.includes('Win')) {
                 scrollFunction();
                 menuVisible2();
                 sisi();
+                //sisi2();
+                //scrollUp2();
             };
         }
     }, 500);
@@ -500,9 +502,10 @@ function menuVisible2(){
 }
 const menuItems = document.querySelectorAll('.menu-item');
 
+
 function sisi (dire) {
     const deta = document.querySelector('.detail-view');
-    const iid = deta.id;
+    //const iid = deta.id;
     //console.log(deta.classList);
     //console.log(iid);
 
@@ -523,6 +526,38 @@ function sisi (dire) {
                     deta.classList.remove('active');
                     item.classList.remove('hidden');
                     //console.log('no');
+                } else if (deta.getBoundingClientRect().top >= 730) {                    
+                    deta.classList.remove('active');
+                    item.classList.remove('hidden');
+                }                
+            //}
+        }
+    });
+}
+
+function sisi2 () {
+    const deta = document.querySelector('.detail-view');
+    //const iid = deta.id;
+    //console.log(deta.classList);
+    //console.log(iid);
+
+    menuItems.forEach((item) => {
+        if (item.classList.contains('hidden')) {
+            const rect = item.getBoundingClientRect();
+            //const positionX = rect.left + window.scrollX;
+            //const positionY = rect.top + window.scrollY;
+            //console.log(deta.getBoundingClientRect().top);
+            //window.onscroll = function () {
+                if (deta.getBoundingClientRect().top >= 730) {
+                //if (document.body.scrollTop > rect.height || document.documentElement.scrollTop > rect.height) {
+                            //
+                    //console.log('si');
+                    deta.classList.remove('active');
+                    item.classList.remove('hidden');
+                } else if (isBottomOfPage() || window.scrollY == 0) {
+                    //deta.classList.remove('active');
+                    //item.classList.remove('hidden');
+                    //console.log('no');
                 }/*  else if (dire == 'arriba'){
                     deta.classList.remove('active');
                     item.classList.remove('hidden');
@@ -530,4 +565,60 @@ function sisi (dire) {
             //}
         }
     });
+}
+
+function scrollUp2() {
+    let lastScrollPosition = 0;
+    window.addEventListener('scroll', () => {
+        const currentScrollPosition = window.scrollY;
+        const deta = document.querySelector('.detail-view');
+
+        if (currentScrollPosition < lastScrollPosition) {
+            //console.log('Scrolling up');
+            console.log(deta.getBoundingClientRect().top);
+            // Aquí puedes ejecutar la lógica para el scroll hacia arriba
+        } else {
+            //console.log('Scrolling down');
+            // Aquí puedes ejecutar la lógica para el scroll hacia abajo
+        }
+
+        lastScrollPosition = currentScrollPosition;
+    });
+}
+
+function scrollUp() {
+    let lastScrollPosition = 0;
+    const elementToHide = document.getElementById('elementToHide');
+    
+    
+
+    /* menuItems.forEach((item, index) => {
+        const targetDiv = document.getElementById(item.id);
+        const targetHeight = targetDiv.offsetHeight;
+        console.log(targetHeight);
+    }); */
+
+    window.addEventListener('scroll', () => {        
+        const currentScrollPosition = window.scrollY;
+        menuItems.forEach((item, index) => {
+            const deta = document.querySelector('.detail-view');
+            const targetHeight = deta.offsetHeight;
+            //const targetDiv = document.getElementById(item.id);
+            //const targetHeight = targetDiv.offsetHeight;
+            //console.log(targetHeight);
+        
+
+      // Detect scroll up
+      if (currentScrollPosition < lastScrollPosition) {
+        if (currentScrollPosition > targetHeight) {
+          deta.classList.add('hidden'); // Hide the element
+          item.classList.remove('hidden');
+        }
+      } else {
+        deta.classList.remove('active'); // Show the element on scroll down
+      }
+    });
+      lastScrollPosition = currentScrollPosition;
+    });
+
 }
