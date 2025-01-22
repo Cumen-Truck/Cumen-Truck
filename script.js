@@ -9,7 +9,8 @@ const ContMeta = 'Cumen Truck ofrece una deliciosa variedad de comidas rápidas,
 const plataforma = navigator.userAgent;
 
 //definimos la funcion onload
-window.onload = function() {    
+window.onload = function() {
+    console.log(document.title);
     metaContent.content = ContMeta;
 };
 //document.body.onload = cargarImg;
@@ -49,7 +50,7 @@ function cargarImg(){
 
 
 //definimos la funcion que crea el boton de top para dispositivos moviles
-function creaTop(){    
+function creaTop(){
     if (window.location.pathname.includes('about')) {
         var destino = document.querySelector(".container");
     } else {
@@ -216,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 detailView.style.height = `${rect.height}px`; // Mantener la altura del artículo
                 detailView.style.transform = 'scale(0)';
                 // Forzar un reflow para registrar el estado inicial
-                detailView.offsetHeight;                
+                detailView.offsetHeight;
 
                 const itemid = document.getElementById(item.id);
                 //itemid.classList.add('hidden');
@@ -246,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     };
                 }, 300);
-                
+
                 // Mostrar información detallada
                 const detailContent = `
                     <img src="Imagenes/logo-transparente.webp" alt="" id="FondoImg" class="FondoImg">
