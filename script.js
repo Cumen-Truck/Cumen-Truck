@@ -9,8 +9,7 @@ const ContMeta = 'Cumen Truck ofrece una deliciosa variedad de comidas rápidas,
 const plataforma = navigator.userAgent;
 
 //definimos la funcion onload
-window.onload = function() {
-    console.log(document.title);
+window.onload = function() {    
     metaContent.content = ContMeta;
 };
 //document.body.onload = cargarImg;
@@ -46,8 +45,6 @@ function cargarImg(){
         }
     }
 }
-
-
 
 //definimos la funcion que crea el boton de top para dispositivos moviles
 function creaTop(){
@@ -232,9 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 itemid.classList.add('hidden');
 
-
-
-
                 setTimeout(() => {
                     item.ontransitionend = (evento) => {
                         if (evento.propertyName === 'transform' && item.classList.contains('hidden')) { // Asegura que estamos escuchando transform
@@ -265,6 +259,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <!-- <button class="back-button"><img src="Imagenes/close.webp" alt="" id="btnClose" class="btnClose"></button> -->
                     <div class="back-button"><button id="btnClose" class="btnClose"></button></div>
+                    <div class="play-button"><button title="play" id="btnPlay" class="btnPlay" onclick="leerTexto()"></button></div>
+                    <!-- <button onclick="leerTexto()">Leer texto</button> -->
                 `;
                 detailView.innerHTML = detailContent;
                 var lklk = item.querySelector('.price');
@@ -311,6 +307,15 @@ document.addEventListener('DOMContentLoaded', () => {
         //
     }
 });
+//definimos la funcion para cargar los precios
+function CargaPrecios() {
+    price.forEach((element) => {
+        (async () => {
+            const descripcion = await buscarDescripcion2(element.id.toLowerCase(), 'precios', 'precios'); // Cambiar a otro identificador para probar
+            element.textContent = '$' + descripcion;
+            })();
+    });
+}
 //definimos la funcion que verifica si un componente tiene transformacion
 function esTransform(ele){
     const estilo = window.getComputedStyle(ele);
@@ -398,9 +403,10 @@ function menuVisible2(){
         }
     }
 }
-const menuItems = document.querySelectorAll('.menu-item');
+//const menuItems = document.querySelectorAll('.menu-item');
 
 function sisi () {
+    const menuItems = document.querySelectorAll('.menu-item');
     const deta = document.querySelector('.detail-view');
     menuItems.forEach((item, index) => {
         if (item.classList.contains('hidden')) {

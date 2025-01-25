@@ -1,8 +1,8 @@
 {
 	"precios": {
 		"burguer" : "6500",
-		"cordero" : "9500",
-		"pollo" : "5500",
+		"cordero" : "10000",
+		"pollo" : "6000",
 		"choritaco" : "5500",
 		"choriburguer" : "9000",
 		"trucha" : "5500",
@@ -12,6 +12,6 @@
 		"gaseosa" : "3000",
 		"saborizada" : "2500",
 		"agua" : "2500",
-		"cerveza" : "3000"
+		"cerveza" : "3500"
 	}
 }

@@ -170,7 +170,7 @@ main {
 .nodo-img-item img {
     position: relative;
     width: 20%;
-    animation: heartbeat 1.5s ease-in-out 10;
+    animation: heartbeat 1.5s ease-in-out 5;
 }
 
 #FondoImg {
@@ -354,8 +354,8 @@ footer a:hover {
         position: relative;
         /* right: 20px; */
         right: 10px;
-        /* padding: 20px; */
-        padding: 5px;
+        padding: 20px;
+        /* padding: 5px; */
         border: 1px solid #333;
         border-radius: 50px;
         background: #333333eb url('Imagenes/top.webp') no-repeat center/cover;

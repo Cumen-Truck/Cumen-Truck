@@ -2,14 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cumen Truck!">
     <!-- <link rel="shortcut icon" href="Imagenes/favicon.ico"> -->
+    <link rel="icon" href="Imagenes/favicon.webp" type="image/x-icon">
     <link rel="shortcut icon" href="Imagenes/favicon.webp">
     <title>Carta Cumen Truck</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://cumen-truck.github.io/Cumen-Truck/styles.css"> -->
     <link rel="stylesheet" href="animaciones.css">
-    <script type="text/javascript" src="script.js" defer></script>
+    <!-- <script type="text/javascript" src="script.js" defer></script> -->
     <!-- <script src="path.js"></script> -->
     <!-- <script src="fs.js"></script> -->
     <script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
@@ -25,7 +28,7 @@
         <!-- <h1>Cumen Truck</h1> -->
         <p>¡El buen sabor!</p>
         <div class="menu-container">
-            <button class="menu-toggle" aria-label="Abrir menú" >&#9776;</button>
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
             <nav class="menu">
                 <ul>
                     <!-- <li id="page"><a href="index.html">Comidas</a></li> -->
@@ -145,21 +148,50 @@
         <a href="https://www.instagram.com/cumen.truck/" target="_blank"><img src="Imagenes/instagram.webp" alt="Instagram" class="ImgSocial" id="Instagram" onmouseover="Titulos()"></a>
         <!-- <a href="#">Twitter</a> -->
     </footer>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-    <script>
-        let posicionScrollAnterior = window.scrollY;
-        const manejarScroll = _.throttle(() => {
-            const posicionScrollActual = window.scrollY;
-            if (posicionScrollActual < posicionScrollAnterior) {
-            console.log('Scroll hacia arriba');
-            sisi('arriba');
-            } else if (posicionScrollActual > posicionScrollAnterior) {
-            console.log('Scroll hacia abajo');
-            }
-            posicionScrollAnterior = posicionScrollActual;
-        }, 100); // Ejecutar máximo una vez cada 100 ms
-        window.addEventListener('scroll', manejarScroll);
+    <!-- <script type="text/javascript" src="script.js" defer></script> -->
+    <!-- <script>
+        let script = document.createElement("script");
+            script.src = "script.js";
+            script.type = "text/javascript";
+            script.defer = true;
+            script.onload = function() {
+                try {
+                    if (typeof creaTop === 'function') creaTop();
+                    if (typeof scrollFunction === 'function') scrollFunction();
+                    if (typeof cargarImg === 'function') cargarImg();
+                    if (typeof CargaPrecios === 'function') CargaPrecios();
+                    console.log("Script cargado correctamente.");
+                } catch (error) {
+                    console.error('Error al ejecutar funciones:', error);
+                }
+                //console.log("Script cargado correctamente.");
+            };
+        document.head.appendChild(script);
     </script> -->
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        let script = document.createElement("script");
+            script.src = "script2.js";
+            script.type = "text/javascript";
+            // script.defer = true;
+            script.onload = function() {
+                /* try {
+                     const btn = document.querySelector('.btnPlay');
+                    menuItems.forEach(element => {
+                        element.addEventListener('click', () => {
+                            if (typeof leerTexto === 'function') leerTexto();
+                        });                        
+                    });                    
+                    //if (typeof scrollFunction === 'function') scrollFunction();
+                    //if (typeof cargarImg === 'function') cargarImg();
+                    //if (typeof CargaPrecios === 'function') CargaPrecios();
+                    console.log("Script cargado correctamente.");
+                } catch (error) {
+                    console.error('Error al ejecutar funciones:', error);
+                } */
+                //console.log("Script cargado correctamente.");
+            };
+        document.head.appendChild(script);
+    </script>
 </body>
 </html>
