@@ -39,7 +39,11 @@ function cargarImg(){
         var nodo1 = document.querySelectorAll('#nodo-img-item');
         for (let c = 0; c < nodo1.length; c++) {
             var nodoImg = document.createElement("img");
-            nodoImg.setAttribute("src", "Imagenes/logo-transparente.webp");
+            if (plataforma.includes('Win')) {
+                nodoImg.setAttribute("src", "Imagenes/logo-transparente.avif");
+            } else if (plataforma.includes('Android')) {
+                nodoImg.setAttribute("src", "Imagenes/logo-transparente-266x100.avif");
+            }
             nodoImg.id = 'img-item-' + c;
             nodo1[c].appendChild(nodoImg);
         }
@@ -252,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Mostrar información detallada
                 const detailContent = `
-                    <img src="Imagenes/logo-transparente.webp" alt="" id="FondoImg" class="FondoImg">
+                    <img src="Imagenes/logo-transparente.avif" alt="" id="FondoImg" class="FondoImg">
                     <div class="descContent">
                         <h2>${item.querySelector('h3').textContent}</h2>
                         <!-- <p>${item.querySelector('p:not(.price)').textContent}</p> -->

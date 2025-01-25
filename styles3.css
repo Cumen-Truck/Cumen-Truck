@@ -238,7 +238,7 @@ footer a:hover {
     position: relative;
     border-radius: 50% 25% 25% 50%;
     background-color: transparent;
-    background-image: url('Imagenes/izquierda.webp');
+    background-image: url('Imagenes/izquierda.avif');
     background-size: cover;
     border: 2px solid #ff6100;
     padding: 20px;
@@ -358,7 +358,7 @@ footer a:hover {
         /* padding: 5px; */
         border: 1px solid #333;
         border-radius: 50px;
-        background: #333333eb url('Imagenes/top.webp') no-repeat center/cover;
+        background: #333333eb url('Imagenes/top.avif') no-repeat center/cover;
         color: white;
         font-size: 18px;
         z-index: 10;

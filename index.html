@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cumen Truck!">
     <!-- <link rel="shortcut icon" href="Imagenes/favicon.ico"> -->
-    <link rel="icon" href="Imagenes/favicon.webp" type="image/x-icon">
-    <link rel="shortcut icon" href="Imagenes/favicon.webp">
+    <link rel="icon" href="Imagenes/favicon.avif" type="image/x-icon">
+    <link rel="shortcut icon" href="Imagenes/favicon.avif">
     <title>Carta Cumen Truck</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" id="stylePage">
     <!-- <link rel="stylesheet" href="https://cumen-truck.github.io/Cumen-Truck/styles.css"> -->
     <link rel="stylesheet" href="animaciones.css">
     <!-- <script type="text/javascript" src="script.js" defer></script> -->
     <!-- <script src="path.js"></script> -->
     <!-- <script src="fs.js"></script> -->
+    <script src="script-responsive.js"></script>
     <script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
     <script type="text/javascript" src="https://unpkg.com/web3@0.20.5/dist/web3.min.js"></script>
     <!-- <script defer src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script> -->
@@ -22,7 +23,7 @@
 <body>
     <header id="jaja">
         <div class="logo">
-            <img src="Imagenes/logo-transparente.webp" alt="">
+            <img src="Imagenes/logo-transparente.avif" alt="" id="Logo">
         </div>
         <!-- <img src="Imagenes/portada.png" alt="Portada"> -->
         <!-- <h1>Cumen Truck</h1> -->
@@ -45,7 +46,7 @@
             <article class="menu-item" id="logo-item0">
                 <!-- <div class="logo-item" id="logo-item"></div> -->
                 <img src="Imagenes/Burguer/burguer-completa.webp" alt="" id="Burguer" class="Burguer">
-                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/fondo-img.avif" alt="" id="FondoImg" class="FondoImg">
                 <img src="Imagenes/Burguer/burguer.webp" alt="" id="Img1" class="Img1">
                 <!-- <img src="Imagenes/burguer.webp" alt="Menu 1" id="Img2" class="Img2"> -->
                 <img src="Imagenes/Burguer/textos-burguer.webp" alt="" id="Img2" class="Img2">
@@ -56,7 +57,7 @@
 
             <article class="menu-item" id="logo-item1">
                 <img src="Imagenes/Cordero/cordero-completa.webp" alt="" id="Cordero" class="Cordero">
-                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/fondo-img.avif" alt="" id="FondoImg" class="FondoImg">
                 <img src="Imagenes/Cordero/burguer.webp" alt="Menu 5" id="Img1" class="Img1">
                 <img src="Imagenes/Cordero/Textos-Cordero.webp" alt="" id="Img2" class="Img2">
                 <h3>Hamburguesa Cordero</h3>
@@ -66,7 +67,7 @@
 
             <article class="menu-item" id="logo-item2">
                 <img src="Imagenes/Pollo/pollo-completa.webp" alt="" id="Pollo" class="Pollo">
-                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/fondo-img.avif" alt="" id="FondoImg" class="FondoImg">
                 <img src="Imagenes/Pollo/pollo.webp" alt="Menu 8" id="Img1" class="Img1">
                 <img src="Imagenes/Pollo/textos-pollo.webp" alt="" id="Img2" class="Img2">
                 <h3>Hamburguesa Pollo</h3>
@@ -76,7 +77,7 @@
 
             <article class="menu-item" id="logo-item3">
                 <img src="Imagenes/Chori-Burguer/choriburguer-completa.webp" alt="" id="ChoriBurguer" class="ChoriBurguer">
-                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/fondo-img.avif" alt="" id="FondoImg" class="FondoImg">
                 <img src="Imagenes/Chori-Burguer/chori-burguer.webp" alt="Menu 7" id="Img1" class="Img1">
                 <img src="Imagenes/Chori-Burguer/textos-choriburguer.webp" alt="" id="Img2" class="Img2">
                 <!-- <video controls width="640" height="360"> -->
@@ -89,7 +90,7 @@
 
             <article class="menu-item" id="logo-item4">
                 <img src="Imagenes/Choritaco/chori-completo.webp" alt="" id="Choritaco" class="Choritaco">
-                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/fondo-img.avif" alt="" id="FondoImg" class="FondoImg">
                 <img src="Imagenes/Choritaco/chori.webp" alt="Menu 2" id="Img1" class="Img1">
                 <img src="Imagenes/Choritaco/textos-chori.webp" alt="" id="Img2" class="Img2">
                 <h3>Choritaco</h3>
@@ -99,7 +100,7 @@
 
             <article class="menu-item" id="logo-item5">
                 <img src="Imagenes/Trucha/trucha-completa.webp" alt="" id="Trucha" class="Trucha">
-                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/fondo-img.avif" alt="" id="FondoImg" class="FondoImg">
                 <img src="Imagenes/Trucha/trucha.webp" alt="Menu 3" id="Img1" class="Img1">
                 <img src="Imagenes/Trucha/textos-trucha.webp" alt="" id="Img2" class="Img2">
                 <h3>Taco de Trucha</h3>
@@ -109,7 +110,7 @@
 
             <article class="menu-item" id="logo-item6">
                 <img src="Imagenes/Veggie/veggie-completo.webp" alt="" id="Veggie" class="Veggie">
-                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/fondo-img.avif" alt="" id="FondoImg" class="FondoImg">
                 <img src="Imagenes/Veggie/veggie.webp" alt="Menu 4" id="Img1" class="Img1">
                 <img src="Imagenes/Veggie/textos-veggie.webp" alt="" id="Img2" class="Img2">
                 <h3>Taco Veggie</h3>
@@ -119,7 +120,7 @@
 
             <article class="menu-item" id="logo-item7">
                 <img src="Imagenes/Fritas/fritas-completa.webp" alt="" id="Fritas" class="Fritas">
-                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/fondo-img.avif" alt="" id="FondoImg" class="FondoImg">
                 <img src="Imagenes/Fritas/fritas.webp" alt="Menu 7" id="Img1" class="Img1">
                 <img src="Imagenes/Fritas/textos-fritas.webp" alt="" id="Img2" class="Img2">
                 <h3>Cono Fritas</h3>
@@ -129,7 +130,7 @@
 
             <article class="menu-item" id="logo-item8">
                 <img src="Imagenes/Pancho/pancho-completo.webp" alt="" id="Pancho" class="Pancho">
-                <img src="Imagenes/fondo-img.webp" alt="" id="FondoImg" class="FondoImg">
+                <img src="Imagenes/fondo-img.avif" alt="" id="FondoImg" class="FondoImg">
                 <img src="Imagenes/Pancho/pancho.webp" alt="Menu 6" id="Img1" class="Img1">
                 <img src="Imagenes/Pancho/textos-pancho.webp" alt="" id="Img2" class="Img2">
                 <h3>Super Pancho</h3>
@@ -145,7 +146,7 @@
     <footer>
         <p>Síguenos en:</p>
         <a href="https://www.facebook.com/cumen.truck" target="_blank"><img src="Imagenes/facebook.svg" alt="Facebook" class="ImgSocial" id="Facebook" onmouseover="Titulos()"></a>
-        <a href="https://www.instagram.com/cumen.truck/" target="_blank"><img src="Imagenes/instagram.webp" alt="Instagram" class="ImgSocial" id="Instagram" onmouseover="Titulos()"></a>
+        <a href="https://www.instagram.com/cumen.truck/" target="_blank"><img src="Imagenes/instagram.avif" alt="Instagram" class="ImgSocial" id="Instagram" onmouseover="Titulos()"></a>
         <!-- <a href="#">Twitter</a> -->
     </footer>
     <!-- <script type="text/javascript" src="script.js" defer></script> -->
