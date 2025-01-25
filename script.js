@@ -101,6 +101,14 @@ if (plataforma.includes('Win')) {
 } else if (plataforma.includes('Android')) {
     setTimeout(() => {
         menu.classList.add('active');
+        menuToggle.addEventListener('click', () => {
+            tiene = menu.classList.value;
+            if (tiene === 'menu active') {
+                menu.classList.remove('active');
+            } else {
+                menu.classList.add('active');
+            }
+        });
         if (['index', 'Cumen-Truck', 'Menu-Cumen-Truck', 'bebidas', 'about'].some(path => window.location.pathname.includes(path))) {
             window.onscroll = function () {
                 scrollFunction();
