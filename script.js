@@ -27,7 +27,7 @@ function Titulos() {
 function cargarImg(){
     var destino = document.querySelectorAll(".menu-item");
     //var destino = elem;
-    if (destino == undefined)
+    if (destino === undefined)
         alert("No existe el bloque destino");
     else{
         for (let i = 0; i < destino.length; i++) {
@@ -57,7 +57,7 @@ function creaTop(){
     } else {
         destino = document.querySelector("main");
     }
-    if (destino == undefined)
+    if (destino === undefined)
         alert("No existe el bloque destino");
     else{
         var nodoTop = document.createElement("div");
@@ -81,7 +81,7 @@ todosss.forEach(element => {
     if (plataforma.includes('Win')) {
         element.addEventListener("click", () => {
             tiene = menu.classList.value;
-            if (tiene == 'menu active') {
+            if (tiene === 'menu active') {
                 //console.log(tiene);
                 menu.classList.remove('active');
             } else {
@@ -365,7 +365,7 @@ async function cargarJson(url) {
 // Función para buscar una descripción por su identificador
 async function buscarDescripcion2(identificador, titu, archivo) {
     const datos = await cargarJson("assets/" + archivo + '.json');
-    if (titu == 'precios') {
+    if (titu === 'precios') {
         if (datos && datos.precios && datos.precios[identificador]) {
         return datos.precios[identificador];
         } else {

@@ -10,11 +10,10 @@ async function esMovil2() {
     return esDispositivoMovil(); // Fallback si `userAgentData` no está disponible
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const head = document.head;
     let link = document.getElementById("stylePage");
 
-    // Si no existe el link, lo creamos
     if (!link) {
         link = document.createElement("link");
         link.id = "stylePage";
@@ -22,14 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
         head.appendChild(link);
     }
 
-    // Detectar si es móvil y aplicar estilos y logos
+    //const esMovil = await esMovil2();
+    //link.href = esMovil ? "styles-mobile.css" : "styles.css";
     esMovil2().then(esMovil => {
         link.href = esMovil ? "styles-mobile.css" : "styles.css";
-
-        // Cambiar el logo
-        const logo = document.querySelector("#Logo");
-        if (logo) {
-            logo.src = esMovil ? "Imagenes/logo-transparente-266x100.avif" : "Imagenes/logo-transparente.avif";
-        }
     });
+
+    // Cambiar el logo
+    const logo = document.querySelector("#Logo");
+    if (logo) {
+        logo.src = esMovil ? "Imagenes/logo-transparente-266x100.avif" : "Imagenes/logo-transparente.avif";
+    }
 });
