@@ -349,6 +349,7 @@ footer a:hover {
         border-radius: 50px;
         font-size: 18px;
         z-index: 10;
+        opacity: 0.8;
     }
     #myBtn:hover {
         background-color: #555;
