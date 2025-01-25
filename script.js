@@ -390,7 +390,7 @@ function CargaAbout () {
         imgabout.style.backgroundSize = 'cover';
         imgabout.style.backgroundRepeat = 'no-repeat';
         if (plataforma.includes('Android')) {
-            imgabout.src = 'Imagenes/about-baja.webp';
+            imgabout.src = 'Imagenes/about-baja.avif';
             imgabout.alt = 'About-Baja';
         } else if (plataforma.includes('Win')) {
             imgabout.src = urlAbout;
