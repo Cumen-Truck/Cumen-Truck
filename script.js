@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const descripcion = await buscarDescripcion2(element.id.toLowerCase(), 'precios', 'precios'); // Cambiar a otro identificador para probar
             element.textContent = '$' + descripcion;
             })();
-    });
+    });    
     if (esMovil()) {
         if (window.location.pathname.includes('about')) {
             //
@@ -286,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const string = item.id;
                 const numero = string.match(/\d+/);
                 video.src = 'Videos/' + numero[0] + '.webm';
+                //video.src = 'Videos/' + numero[0] + '.mp4';
                 video.type = 'video/mp4';
                 video.autoplay = true;
                 video.muted = true;
