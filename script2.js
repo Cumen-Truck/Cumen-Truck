@@ -4,7 +4,8 @@ async function leerTexto() {
         //const texto = document.querySelector('#descr');
         const texto = document.querySelector('#descr')?.textContent.trim();
         const btn = document.querySelector('.btnPlay');
-        if (btn.classList == 'btnPlay') {
+        //if (btn.classList == 'btnPlay') {
+        if (btn.className === 'btnPlay') {
             btn.classList.add('stop');        
             if (texto !== "") {
                 const utterance = new SpeechSynthesisUtterance(texto);
@@ -22,7 +23,7 @@ async function leerTexto() {
                 // Iniciar la lectura
                 speechSynthesis.speak(utterance);
             }
-        } else {
+        } else if (btn.className === 'btnPlay stop') {
             btn.classList.remove('stop');
             if (speechSynthesis.speaking) {
                 speechSynthesis.cancel();
