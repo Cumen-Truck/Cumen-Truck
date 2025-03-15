@@ -122,7 +122,7 @@ header p {
     left: 0;
     right: 0;
     margin: auto;
-    animation: heartbeat2 1.5s ease-in-out 4;
+    /*animation: heartbeat2 1.5s ease-in-out 4;*/
 }
 .logo img {
     position: relative;
@@ -250,7 +250,7 @@ footer a:hover {
     .logo {
         height: 100px;
         opacity: 0.8;
-        animation: heartbeat2 1.5s ease-in-out 2;
+        /*animation: heartbeat2 1.5s ease-in-out 2;*/
     }
     .menu-container {
         position: fixed;
