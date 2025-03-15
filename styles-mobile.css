@@ -49,7 +49,7 @@
     .logo {
         height: 100px;
         opacity: 0.8;
-        animation: heartbeat2 1.5s ease-in-out 2;
+        /*animation: heartbeat2 1.5s ease-in-out 2;*/
         position: absolute;
         width: 100%;
         /* height: 100px; */
@@ -281,7 +281,7 @@
         margin-left: auto;
         top: 8px;
         opacity: 0.8;
-        animation: heartbeat 1.5s ease-in-out 10;
+        /*animation: heartbeat 1.5s ease-in-out 10;*/
     }
     .menu-item h3 {
         color: #c1ff72;
@@ -452,7 +452,7 @@
     .nodo-img-item img {
         position: relative;
         width: 20%;
-        animation: heartbeat 1.5s ease-in-out 5;
+        /*animation: heartbeat 1.5s ease-in-out 5;*/
     }
     /* .nodo-img-item img {
         animation: heartbeat 1.5s ease-in-out 4;
