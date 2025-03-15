@@ -26,8 +26,8 @@ header {
     display: flex;
     justify-content: center;
     z-index: 5;
-    opacity: 0.8;
-    animation: heartbeat2 1.5s ease-in-out 4;
+    opacity: 0.8;    
+    /* animation: heartbeat2 1.5s ease-in-out 4; */
 }
 .logo img {
     position: relative;
@@ -191,7 +191,7 @@ main {
 .nodo-img-item img {
     position: relative;
     width: 20%;
-    animation: heartbeat 1.5s ease-in-out 5;
+    /* animation: heartbeat 1.5s ease-in-out 5; */
 }
 /* #myBtn {
     display: none; Hidden by default
