@@ -1,6 +1,6 @@
 {
 	"precios": {
-		"burguer" : "7500",
+		"burguer" : "10000",
 		"cordero" : "11000",
 		"pollo" : "7000",
 		"choritaco" : "6500",
@@ -15,3 +15,4 @@
 		"cerveza" : "3500"
 	}
 }
+
